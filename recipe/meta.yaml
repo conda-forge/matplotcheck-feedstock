@@ -1,5 +1,5 @@
 {% set name = "matplotcheck" %}
-{% set version = "0.1.1" %}
+{% set version = "0.1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ac3788daa0303cee80fe273a46ee260bec2bca177fdd2aac24f67de024ce21e0
+  sha256: 92c247854b6c48f8e53029ce72efe09565984186076af692b3db4ad9516efdfd
 
 build:
   noarch: python
