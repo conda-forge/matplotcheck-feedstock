@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
@@ -23,7 +23,7 @@ requirements:
     - numpy >=1.14.0
     - folium
     - geopandas
-    - matplotlib
+    - matplotlib-base
     - rasterio
     - scipy
 
