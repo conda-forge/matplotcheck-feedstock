@@ -5,9 +5,13 @@ Home: http://github.com/earthlab/matplotcheck
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/matplotcheck-feedstock/blob/master/LICENSE.txt)
 
 Summary: A package for testing different types of matplotlib plots.
+
+Development: https://github.com/earthlab/matplotcheck
+
+Documentation: http://matplotcheck.readthedocs.io/
 
 A set of classes and methods to test various aspects of plots. Designed to
 support autograding of plots in the classroom. This package is maintained

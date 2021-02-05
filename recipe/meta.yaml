@@ -1,5 +1,5 @@
 {% set name = "matplotcheck" %}
-{% set version = "0.1.2" %}
+{% set version = "0.1.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 92c247854b6c48f8e53029ce72efe09565984186076af692b3db4ad9516efdfd
+  sha256: 762d5365e51c3d73de1b4ebfb5c52a423885fba2dc2054a1f1319fc40db3b896
 
 build:
   noarch: python
-  number: 1
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -42,7 +42,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'A package for testing different types of matplotlib plots.'
+  summary: A package for testing different types of matplotlib plots.
 
   description: |
     A set of classes and methods to test various aspects of plots. Designed to
