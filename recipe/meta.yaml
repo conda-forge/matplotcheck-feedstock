@@ -6,20 +6,20 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 762d5365e51c3d73de1b4ebfb5c52a423885fba2dc2054a1f1319fc40db3b896
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python >=3
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3
+    - python >={{ python_min }}
     - numpy >=1.14.0
     - folium
     - geopandas
@@ -28,6 +28,8 @@ requirements:
     - scipy
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - matplotcheck
     - matplotcheck.cases
